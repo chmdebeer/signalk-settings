@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Reflections
+Comment=REflections web interface
+Icon=/usr/share/pixmaps/openbox.xpm
+Exec=chromium-browser --kiosk http://10.3.141.1:3000/signalk-reflections
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;
+

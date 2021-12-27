@@ -1,0 +1,42 @@
+{
+  "vessels": {
+    "self": {
+      "uuid": "urn:mrn:signalk:uuid:282fd9cf-5010-4dc4-8cd4-05eeff9fc64a",
+      "name": "Reflections",
+      "design": {
+        "draft": {
+          "value": {
+            "maximum": 0.81
+          }
+        },
+        "length": {
+          "value": {
+            "overall": 9
+          }
+        },
+        "beam": {
+          "value": 3.5
+        },
+        "airHeight": {
+          "value": 3
+        },
+        "aisShipType": {
+          "value": {
+            "name": "Pleasure",
+            "id": 37
+          }
+        }
+      },
+      "sensors": {
+        "gps": {
+          "fromBow": {
+            "value": 4.5
+          },
+          "fromCenter": {
+            "value": 0
+          }
+        }
+      }
+    }
+  }
+}
