@@ -44,9 +44,9 @@
 # Node
     uname -m
 
-    wget https://nodejs.org/dist/v14.15.4/node-v14.15.4-linux-armv7l.tar.xz
-    tar -xf node-v14.15.4-linux-armv7l.tar.xz
-    cd node-v14.15.4-linux-armv7l
+    wget https://nodejs.org/download/release/v14.18.2/node-v14.18.2-linux-armv7l.tar.xz
+    tar -xf node-v14.18.2-linux-armv7l.tar.xz
+    cd node-v14.18.2-linux-armv7l
     sudo cp -R * /usr/local/
 
 
@@ -73,10 +73,7 @@
 
 > Download CAN test programs:
 
-    http://www.skpang.co.uk/dl/can-test_pi2.zip
-    unzip can-test_pi2.zip
-    cd can-test_pi2.zip
-    chmod 777 candump
+    sudo apt-get install can-utils
 
 # Get Signalk
     git clone https://github.com/SignalK/signalk-server.git
@@ -84,7 +81,7 @@
     cp signalk-settings/ecosystem.config.js signalk-server/ecosystem.config.js
 
 > Add package.json from settings to signalk
-
+    sudo npm install -g typescript
     npm install
     npm run build
 
@@ -176,7 +173,7 @@ see https://gist.github.com/Apsu/5021255 for future
 # Starting
     DEBUG=signalk-server:put,signalk-reflections,signalk-gpio bin/signalk-server
 
-    DEBUG=signalk-server:put,signalk-reflections,signalk-gpio bin/signalk-server
+    DEBUG=signalk-server:put,signalk-reflections bin/signalk-server
 
     SIGNALK_NODE_CONFIG_DIR=/home/pi/signalk-settings/.signalk DEBUG=signalk-gsm bin/signalk-server
 

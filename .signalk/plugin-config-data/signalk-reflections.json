@@ -1,7 +1,8 @@
 {
-  "enabled": true,
-  "enableLogging": false,
   "configuration": {
-    "rate": 5000
-  }
+    "rate": 6000
+  },
+  "enabled": true,
+  "enableLogging": true,
+  "enableDebug": true
 }

@@ -20,7 +20,7 @@
         }
       ],
       "id": "10061",
-      "enabled": true
+      "enabled": false
     },
     {
       "pipeElements": [
@@ -32,9 +32,9 @@
             "subOptions": {
               "type": "canbus-canboatjs",
               "interface": "can0",
-              "providerId": "10051"
-            },
-            "providerId": "10051"
+              "preferredAddress": 151,
+              "uniqueNumber": 1709130
+            }
           }
         }
       ],

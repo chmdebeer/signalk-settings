@@ -1,6 +1,7 @@
 {
   "enabled": true,
-  "enableLogging": false,
+  "enableLogging": true,
+  "enableDebug": true,
   "configuration": {
     "rate": 60,
     "locationName": "Cabin",
