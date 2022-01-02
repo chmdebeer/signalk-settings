@@ -42,10 +42,10 @@
         "gpio": 23
       },
       {
-        "description": "Relay B1",
+        "description": "FM Radio",
         "enabled": true,
         "inverse": true,
-        "path": "electrical.switches.bank.20.13.state",
+        "path": "electrical.switches.bank.8.6.state",
         "gpio": 12
       },
       {
@@ -72,6 +72,6 @@
     ]
   },
   "enabled": true,
-  "enableLogging": true,
-  "enableDebug": true
+  "enableLogging": false,
+  "enableDebug": false
 }

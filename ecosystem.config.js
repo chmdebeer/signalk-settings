@@ -7,7 +7,7 @@ module.exports = {
     // First application
     {
       name : 'reflections',
-      script : 'bin/signalk-server',
+      script : '/home/pi/signalk-server/bin/signalk-server',
       cwd : '/home/pi/signalk-server',
       env: {
           "PORT": 3000,

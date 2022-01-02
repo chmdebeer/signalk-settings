@@ -1,8 +1,7 @@
 {
-  "enabled": true,
-  "enableLogging": true,
-  "enableDebug": true,
   "configuration": {
-    "port": "serial0"
-  }
+    "port": "ttyUSB3"
+  },
+  "enabled": true,
+  "enableDebug": true
 }
