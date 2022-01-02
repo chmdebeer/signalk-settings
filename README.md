@@ -4,6 +4,13 @@
     sudo apt-get dist-upgrade
     sudo reboot
 
+sudo apt-get clean
+sudo apt update
+sudo apt dist-upgrade -y
+sudo apt autoremove -y
+sudo apt autoclean
+
+
 # Raspberry pi config
     sudo raspi-config
 
@@ -76,7 +83,7 @@
     sudo apt-get install can-utils
 
 # Get Signalk
-    git clone https://github.com/SignalK/signalk-server.git
+     wget https://github.com/SignalK/signalk-server/archive/refs/tags/v1.39.0.zip
 
     cp signalk-settings/ecosystem.config.js signalk-server/ecosystem.config.js
 
@@ -164,6 +171,22 @@ chmod +x gpioStart.sh
 
 
 see https://gist.github.com/Apsu/5021255 for future
+
+
+
+sudo apt install mpd
+sudo apt-get install alsa-utils
+sudo apt-get install mpc
+wget https://ympd.org/downloads/ympd-1.2.3-armhf.tar.bz2
+tar -xvf ympd-1.2.3-armhf.tar.bz2
+
+sudo ln -s /media/pi/USB\ DISK/ /var/lib/mpd/music/usb
+sudo nano /etc/mpd.conf
+sudo systemctl restart mpd
+pmc play
+sudo ./ympd --webport 8181
+
+
 
 
 
