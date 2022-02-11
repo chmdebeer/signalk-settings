@@ -1,0 +1,54 @@
+{
+  "vessel": {
+    "uuid": "urn:mrn:signalk:uuid:c0d79334-4e25-4245-8892-54e8ccc8021d"
+  },
+  "pipedProviders": [
+    {
+      "id": "multiplexedFromFile",
+      "pipeElements": [
+        {
+          "type": "providers/filestream",
+          "options": {
+            "filename": "samples/reflections.log",
+            "keepRunning": true
+          },
+          "optionMappings": [
+            {
+              "fromAppProperty": "argv.filename",
+              "toOption": "filename"
+            }
+          ]
+        },
+        {
+          "type": "providers/liner"
+        },
+        {
+          "type": "providers/multiplexedlog",
+          "options": {
+            "filtersEnabled": true,
+            "filters": [
+              { "source": "0", "pgn": "127250" },
+              { "source": "1", "pgn": "127250" },
+              { "source": "0", "pgn": "127505" },
+              { "source": "1", "pgn": "127505" },
+              { "source": "0", "pgn": "128259" },
+              { "source": "1", "pgn": "128259" },
+              { "source": "0", "pgn": "129026" },
+              { "source": "1", "pgn": "129026" }
+            ]
+          },
+          "optionMappings": [
+            {
+              "fromAppProperty": "selfId",
+              "toOption": "selfId"
+            },
+            {
+              "fromAppProperty": "selfType",
+              "toOption": "selfType"
+            }
+          ]
+        }
+      ]
+        }
+      ]
+}

@@ -2,5 +2,6 @@
     "signalk-gpio": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-gpio.git",
     "signalk-gsm": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-gsm.git",
     "signalk-ds18b20": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-ds18b20.git",
+    "signalk-fuel-usage": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-fuel-usage.git",
     "signalk-reflections": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-reflections.git"
   },

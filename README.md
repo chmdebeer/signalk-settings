@@ -185,7 +185,7 @@ sudo nano /etc/mpd.conf
 sudo systemctl restart mpd
 pmc play
 sudo ./ympd --webport 8181
-
+sudo nohup ./ympd --webport 8181 1>/dev/null 2>&1 &
 
 
 
@@ -200,7 +200,7 @@ sudo ./ympd --webport 8181
 
     SIGNALK_NODE_CONFIG_DIR=/home/pi/signalk-settings/.signalk DEBUG=signalk-gsm bin/signalk-server
 
-    node bin\signalk-server -s settings/n2k-from-file-settings.json
+    node bin\signalk-server -s settings/multiplexed.json
 
 # Disable screen saver
     sudo nano /etc/lightdm/lightdm.conf
