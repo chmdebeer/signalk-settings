@@ -1,6 +1,6 @@
 {
   "configuration": {
-    "port": "ttyUSB3"
+    "checkFreq": 15000
   },
   "enabled": true,
   "enableLogging": false,

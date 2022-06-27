@@ -1,1 +1,2 @@
-@reboot sleep 60 && /home/pi/start-browser.sh
+@reboot sleep 20 && /home/pi/signalk-settings/start-browser.sh
+
