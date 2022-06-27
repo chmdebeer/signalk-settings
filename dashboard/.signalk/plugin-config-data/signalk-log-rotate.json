@@ -1,0 +1,8 @@
+{
+  "configuration": {
+    "checkFreq": 15000
+  },
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false
+}

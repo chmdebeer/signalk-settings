@@ -3,5 +3,6 @@
     "signalk-gsm": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-gsm.git",
     "signalk-ds18b20": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-ds18b20.git",
     "signalk-fuel-usage": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-fuel-usage.git",
+    "signalk-log-rotate": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-log-rotate.git",
     "signalk-reflections": "git+ssh://chmdebeer@gmail.com@source.developers.google.com:2022/p/chmdebeer/r/signalk-reflections.git"
   },

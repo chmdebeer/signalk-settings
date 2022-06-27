@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false,
+  "configuration": {
+    "rate": 60,
+    "locationName": "Cabin",
+    "key": "inside.mainCabin.temperature"
+  }
+}

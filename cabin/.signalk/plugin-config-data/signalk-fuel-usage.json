@@ -1,0 +1,11 @@
+{
+  "configuration": {
+    "saveFreq": 15000,
+    "timeout": 10000,
+    "savedUsage": {
+      "port": 0,
+      "starboard": 0
+    }
+  },
+  "enabled": true
+}

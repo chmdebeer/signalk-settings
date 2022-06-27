@@ -1,0 +1,8 @@
+{
+  "configuration": {
+    "port": "ttyUSB3"
+  },
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false
+}

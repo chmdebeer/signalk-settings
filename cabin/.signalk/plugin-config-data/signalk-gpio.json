@@ -1,0 +1,77 @@
+{
+  "configuration": {
+    "relays": [
+      {
+        "enabled": true,
+        "gpio": 5,
+        "path": "electrical.switches.bank.8.3.state",
+        "inverse": true,
+        "description": "Port Wiper (Relay A1)"
+      },
+      {
+        "enabled": true,
+        "path": "electrical.switches.bank.8.4.state",
+        "gpio": 6,
+        "inverse": true,
+        "description": "Starboard Wiper (Relay A1)"
+      },
+      {
+        "enabled": true,
+        "path": "electrical.switches.bank.6.2.state",
+        "gpio": 18,
+        "description": "Cabin lights (MOSFET 1)"
+      },
+      {
+        "enabled": true,
+        "path": "electrical.switches.bank.20.10.state",
+        "gpio": 13,
+        "description": "MOSFET 2"
+      },
+      {
+        "description": "MOSFET 3",
+        "enabled": true,
+        "inverse": false,
+        "path": "electrical.switches.bank.20.11.state",
+        "gpio": 24
+      },
+      {
+        "description": "MOSFET 4",
+        "enabled": true,
+        "inverse": false,
+        "path": "electrical.switches.bank.20.12.state",
+        "gpio": 23
+      },
+      {
+        "description": "FM Radio",
+        "enabled": true,
+        "inverse": true,
+        "path": "electrical.switches.bank.8.6.state",
+        "gpio": 12
+      },
+      {
+        "description": "Relay B2",
+        "enabled": true,
+        "inverse": true,
+        "path": "electrical.switches.bank.20.14.state",
+        "gpio": 22
+      },
+      {
+        "description": "Relay B3",
+        "enabled": true,
+        "inverse": true,
+        "path": "electrical.switches.bank.20.15.state",
+        "gpio": 26
+      },
+      {
+        "description": "Relay B4",
+        "enabled": true,
+        "inverse": true,
+        "path": "electrical.switches.bank.20.16.state",
+        "gpio": 27
+      }
+    ]
+  },
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false
+}

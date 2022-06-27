@@ -1,0 +1,65 @@
+{
+  "pipedProviders": [
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
+              "type": "serial",
+              "device": "/dev/ttyUSB0",
+              "baudrate": 38400,
+              "sentenceEvent": "nmea183data",
+              "providerId": "10061"
+            },
+            "providerId": "10061"
+          }
+        }
+      ],
+      "id": "10061",
+      "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA2000",
+            "subOptions": {
+              "type": "canbus-canboatjs",
+              "interface": "can0",
+              "preferredAddress": 151,
+              "uniqueNumber": 1709130,
+              "filtersEnabled": true,
+              "filters": [
+                {
+                  "source": "0",
+                  "pgn": "129026"
+                },
+                {
+                  "source": "1",
+                  "pgn": "129026"
+                },
+                {
+                  "source": "0",
+                  "pgn": "128259"
+                },
+                {
+                  "source": "1",
+                  "pgn": "128259"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "id": "10051",
+      "enabled": true
+    }
+  ],
+  "interfaces": {}
+}
