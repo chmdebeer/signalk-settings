@@ -10,8 +10,8 @@
             "subOptions": {
               "validateChecksum": true,
               "type": "serial",
-              "device": "/dev/ttyUSB0",
-              "baudrate": 38400,
+              "device": "/dev/ttyUSB1",
+              "baudrate": 115200,
               "sentenceEvent": "nmea183data",
               "providerId": "10061"
             },
@@ -19,8 +19,8 @@
           }
         }
       ],
-      "id": "10061",
-      "enabled": false
+      "id": "10091",
+      "enabled": true
     },
     {
       "pipeElements": [
@@ -32,13 +32,48 @@
             "subOptions": {
               "type": "canbus-canboatjs",
               "interface": "can0",
-              "preferredAddress": 151,
-              "uniqueNumber": 1709130
+              "preferredAddress": 181,
+              "uniqueNumber": 1709130,
+              "filters": [
+                {
+                  "source": "0",
+                  "pgn": "129026"
+                },
+                {
+                  "source": "1",
+                  "pgn": "129026"
+                },
+                {
+                  "source": "0",
+                  "pgn": "128259"
+                },
+                {
+                  "source": "1",
+                  "pgn": "128259"
+                },
+                {
+                  "source": "0",
+                  "pgn": "127505"
+                },
+                {
+                  "source": "1",
+                  "pgn": "127505"
+                },
+                {
+                  "source": "0",
+                  "pgn": "127250"
+                },
+                {
+                  "source": "1",
+                  "pgn": "127250"
+                }
+              ],
+              "filtersEnabled": true
             }
           }
         }
       ],
-      "id": "10051",
+      "id": "10081",
       "enabled": true
     }
   ],
