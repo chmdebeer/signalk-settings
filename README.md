@@ -83,7 +83,7 @@ sudo apt autoclean
     sudo apt-get install can-utils
 
 # Get Signalk
-     wget https://github.com/SignalK/signalk-server/archive/refs/tags/v1.39.0.zip
+    wget https://github.com/SignalK/signalk-server/archive/refs/tags/v1.46.3.zip
 
     cp signalk-settings/ecosystem.config.js signalk-server/ecosystem.config.js
 
@@ -200,7 +200,7 @@ sudo nohup ./ympd --webport 8181 1>/dev/null 2>&1 &
 
     SIGNALK_NODE_CONFIG_DIR=/home/pi/signalk-settings/.signalk DEBUG=signalk-gsm bin/signalk-server
 
-    node bin\signalk-server -s settings/multiplexed.json
+    node bin/signalk-server -s settings/reflections.json
 
 # Disable screen saver
     sudo nano /etc/lightdm/lightdm.conf
