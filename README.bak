@@ -1,0 +1,120 @@
+> Check wire in setup
+
+    ls /sys/bus/w1/devices/
+    cat /sys/bus/w1/devices/28-xxxx/w1_slave
+
+> Check modem
+
+    minicom -D /dev/serial0
+
+
+
+# PPP
+    sudo nano /etc/network/interfaces
+
+> Add following lines
+    auto ppp0
+      iface ppp0 inet ppp
+      provider gprs
+      post-up echo "ppp0 is online"
+
+    ip -details -statistics link show can0
+
+# RaspAP
+curl -sL https://install.raspap.com | bash
+
+Connect with:
+  IP address: 10.3.141.1
+  Username: admin
+  Password: secret
+
+sudo systemctl disable raspapd.service
+sudo wpa_supplicant -B -Dnl80211,wext -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+
+# PPP
+    sudo apt-get install ppp
+    sudo su
+    cd /etc/ppp/peers
+    cp provider gprs
+    nano gprs
+
+    Replace with etc.ppp.peers.gprs
+
+> Start with:
+
+    sudo pppd call gprs
+
+> verify with
+
+    cat /var/log/syslog | grep pppd
+
+nano ~/pppStart.sh
+  #!/bin/bash
+
+  CHECK_IP=${CHECK_IP:-8.8.8.8}
+  PRIMARY_IF=${PRIMARY_IF:-eth0}
+
+  if ping -I "$PRIMARY_IF" -c1 "$CHECK_IP" &>/dev/null
+  then
+    echo "eth0 is up"
+  else
+    echo "eth0 is down"
+    sleep 30
+    sudo pon gprs
+    sleep 15
+    sudo route add -net 0.0.0.0 ppp0
+  fi
+
+==========
+#!/bin/bash
+route_found=$(/sbin/route -n | /bin/grep -c ^0.0.0.0)
+ppp_on=$(/sbin/ifconfig | /bin/grep -c ppp0)
+if [ $route_found -eq 0 ] && [ $ppp_on -eq 1 ]
+  then /sbin/route add default ppp0
+fi
+===================
+
+
+
+see https://gist.github.com/Apsu/5021255 for future
+
+
+
+sudo apt install mpd
+sudo apt-get install alsa-utils
+sudo apt-get install mpc
+wget https://ympd.org/downloads/ympd-1.2.3-armhf.tar.bz2
+tar -xvf ympd-1.2.3-armhf.tar.bz2
+
+sudo ln -s /media/pi/USB\ DISK/ /var/lib/mpd/music/usb
+sudo nano /etc/mpd.conf
+sudo systemctl restart mpd
+pmc play
+sudo ./ympd --webport 8181
+sudo nohup ./ympd --webport 8181 1>/dev/null 2>&1 &
+
+
+
+
+# Desktop Icon
+    cp signalk-settings/reflections.desktop Desktop/reflections.desktop
+
+# Starting
+    DEBUG=signalk-reflections bin/signalk-server
+
+    DEBUG=signalk-server:put,signalk-reflections,signalk-gpio bin/signalk-server
+
+    DEBUG=signalk-server:put,signalk-reflections bin/signalk-server
+
+    SIGNALK_NODE_CONFIG_DIR=/home/pi/signalk-settings/.signalk DEBUG=signalk-gsm bin/signalk-server
+
+    node bin/signalk-server -s settings/reflections.json
+
+# Disable screen saver
+    sudo nano /etc/lightdm/lightdm.conf
+
+    xserver-command=X -s 0 -p 0 -dpms
+    #
+    # XDMCP Server configuration
+
+    sudo apt install xscreensaver
