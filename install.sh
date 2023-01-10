@@ -25,11 +25,18 @@ sudo apt-get install can-utils
 
 
 echo "Node"
-# sudo rm -rf /usr/local/bin/node
-# sudo rm -rf /usr/local/bin/tsc
-# sudo rm -rf /usr/local/bin/npm
-# sudo rm -rf /usr/local/bin/npx
-# sudo rm -rf /usr/local/bin/lib/node_modules
+sudo rm -rf /usr/local/bin/node
+sudo rm -rf /usr/local/bin/tsc
+sudo rm -rf /usr/local/bin/npm
+sudo rm -rf /usr/local/bin/npx
+sudo rm -rf /usr/local/bin/lib/node_modules
+sudo rm -rf /usr/local/lib/node_modules
+
+sudo rm -rf /usr/local/bin/pm2
+sudo rm -rf /usr/local/bin/pm2-dev
+sudo rm -rf /usr/local/bin/pm2-docker
+sudo rm -rf /usr/local/bin/pm2-runtime
+
 
 cd ~
 uname -m
@@ -82,3 +89,8 @@ echo "pm2 save"
 #    @reboot sleep 30 && /home/pi/start-browser.sh
 #    @reboot /home/pi/signalk-server-node/pppStart.sh &
 #    @reboot /home/pi/signalk-server-node/gpioStart.sh &
+
+
+@reboot sudo nohup /home/pi/ympd --webport 8181 1>/dev/null 2>&1 &
+@reboot sleep 30 && /home/pi/signalk/signalk-settings/start-browser-cabin.sh
+
