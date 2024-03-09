@@ -52,8 +52,8 @@ sudo npm install -g typescript
 echo "Signalk"
 cd ~/signalk
 wget https://github.com/SignalK/signalk-server/archive/refs/tags/v2.6.0.zip
-unzip v1.46.3.zip
-mv signalk-server-1.46.3 signalk-server
+unzip v2.6.1.zip
+mv signalk-server-2.6.1 signalk-server
 cd signalk-server
 npm install
 npm run build:all
