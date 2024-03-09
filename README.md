@@ -32,3 +32,12 @@
     cd ~/signalk/signalk-settings
     chmod 755 install.sh
     ./install.sh
+
+# Starting
+    DEBUG=signalk-server:put,signalk-reflections,signalk-gpio bin/signalk-server
+
+    DEBUG=signalk-server:put,signalk-reflections,signalk-gpio bin/signalk-server
+
+    SIGNALK_NODE_CONFIG_DIR=/home/pi/signalk-settings/.signalk DEBUG=signalk-gsm bin/signalk-server
+
+    node bin/signalk-server -s settings/reflections.json

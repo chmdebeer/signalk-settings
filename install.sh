@@ -7,7 +7,7 @@ chmod 777 start-browser-cabin.sh
 chmod 777 start-browser-dashboard.sh
 
 echo "Start up"
-sudo cat ~/signalk/signalk-settings/boot.config.txt > /boot/config.txt
+sudo cat ~/signalk/signalk-settings/boot.config.txt > /boot/firmware/config.txt
 
 echo "For Cabin"
 sudo cat ~/signalk/signalk-settings/etc.rc.local > /etc/rc/local
@@ -51,7 +51,7 @@ sudo npm install -g typescript
 
 echo "Signalk"
 cd ~/signalk
-wget https://github.com/SignalK/signalk-server/archive/refs/tags/v1.46.3.zip
+wget https://github.com/SignalK/signalk-server/archive/refs/tags/v2.6.0.zip
 unzip v1.46.3.zip
 mv signalk-server-1.46.3 signalk-server
 cd signalk-server
