@@ -90,6 +90,7 @@ echo "pm2 save"
 #    @reboot /home/pi/signalk-server-node/pppStart.sh &
 #    @reboot /home/pi/signalk-server-node/gpioStart.sh &
 
+@reboot sleep 30 && /home/boat/signalk/signalk-settings/start-browser.sh
 
 @reboot sudo nohup /home/pi/ympd --webport 8181 1>/dev/null 2>&1 &
 @reboot sleep 30 && /home/pi/signalk/signalk-settings/start-browser-cabin.sh
