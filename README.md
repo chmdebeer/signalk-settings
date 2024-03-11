@@ -20,7 +20,7 @@
 
 # Add SSH keys
     ssh-keygen -t rsa -C "chmdebeer@gmail.com"
-    vi /home/pi/.ssh/id_rsa.pub
+    vi /home/boat/.ssh/id_rsa.pub
 
 # Get Settings
     cd ~

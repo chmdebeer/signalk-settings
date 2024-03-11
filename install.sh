@@ -4,10 +4,10 @@ chmod 777 pi_gpio_init.sh
 chmod 777 gpioStart.sh
 chmod 777 pppStart.sh
 chmod 777 start-browser-cabin.sh
-chmod 777 start-browser-dashboard.sh
+chmod 777 start-browser.sh
 
 echo "Start up"
-sudo cat ~/signalk/signalk-settings/boot.config.txt > /boot/firmware/config.txt
+sudo cat ~/signalk/signalk-settings/boot.config.txt > /boot/config.txt
 
 echo "For Cabin"
 sudo cat ~/signalk/signalk-settings/etc.rc.local > /etc/rc/local
@@ -40,10 +40,14 @@ sudo rm -rf /usr/local/bin/pm2-runtime
 
 cd ~
 uname -m
-wget https://nodejs.org/download/release/v18.12.1/node-v18.12.1-linux-armv7l.tar.xz
-tar -xf node-v18.12.1-linux-armv7l.tar.xz
-cd node-v18.12.1-linux-armv7l
+wget https://nodejs.org/download/release/v18.19.1/node-v18.19.1-linux-armv7l.tar.xz
+tar -xf node-v18.19.1-linux-armv7l.tar.xz
+cd node-v18.19.1-linux-armv7l
 sudo cp -R * /usr/local/
+
+wget https://nodejs.org/download/release/v18.19.1/node-v18.19.1-linux-x64.tar.xz
+
+sudo npm install -g npm@9.0
 
 echo "Typescript"
 cd ~
@@ -52,8 +56,8 @@ sudo npm install -g typescript
 echo "Signalk"
 cd ~/signalk
 wget https://github.com/SignalK/signalk-server/archive/refs/tags/v2.6.0.zip
-unzip v2.6.1.zip
-mv signalk-server-2.6.1 signalk-server
+unzip v2.6.0.zip
+mv signalk-server-2.6.0 signalk-server
 cd signalk-server
 npm install
 npm run build:all
